@@ -1,0 +1,179 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+  --color-orange: hsl(25, 97%, 53%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-grey: hsl(217, 12%, 63%);
+  --color-dark-blue: hsl(213, 19%, 18%);
+  --color-very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-very-dark-blue);
+  font-family: "overpass";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 15px;
+}
+
+.rate-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5em;
+  width: 340px;
+  background-color: var(--color-dark-blue);
+  border-radius: 20px;
+  padding: 22px;
+  figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: hsl(218, 25%, 24%);
+    img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+  h2 {
+    color: var(--color-white);
+    font-weight: 700;
+  }
+  p {
+    color: var(--color-light-grey);
+    line-height: 1.5;
+    font-weight: 400;
+  }
+}
+
+.rate-group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.radio-input {
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  span {
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: 50%;
+    border: none;
+    color: var(--color-white);
+    background-color: hsl(218, 25%, 24%);
+    cursor: pointer;
+  }
+}
+
+.radio-input input:checked + span {
+  background-color: var(--color-white);
+  color: black;
+}
+
+.radio-input:hover span {
+  background-color: var(--color-orange);
+  color: black;
+}
+
+.submit-btn {
+  margin-top: 1.5em;
+  width: 100%;
+  height: 35px;
+  color: black;
+  background-color: var(--color-orange);
+  border-radius: 15px;
+  border: none;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: var(--color-white);
+}
+
+.submitted-card {
+  display: none;
+  width: 340px;
+  background-color: var(--color-dark-blue);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1.25em;
+  figure {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    img {
+      margin: 0.5em auto;
+      height: 85px;
+      object-fit: contain;
+    }
+    figcaption {
+      margin-inline: auto;
+      width: fit-content;
+      padding: 8px 20px;
+      border-radius: 15px;
+      background-color: hsl(218, 25%, 24%);
+      color: var(--color-orange);
+    }
+  }
+}
+
+.content {
+  text-align: center;
+  h2 {
+    color: var(--color-white);
+    font-weight: 700;
+    margin-top: 1.5em;
+  }
+  p {
+    margin-top: 0.5em;
+    color: var(--color-light-grey);
+    font-weight: 400;
+    line-height: 1.5em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .rate-card,
+  .submitted-card {
+    width: 380px;
+  }
+}
